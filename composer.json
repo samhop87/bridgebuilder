@@ -1,0 +1,33 @@
+{
+    "name": "samhopkinson/bridgebuilder",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        },
+        "classmap": [
+            "tests"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Sam Hopkinson",
+            "email": "s.hopkinson87@gmail.com"
+        }
+    ],
+    "require": {
+        "sammyjo20/saloon": "^1.0"
+    },
+    "require-dev": {
+        "pestphp/pest": "^1.22"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}
