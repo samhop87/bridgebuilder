@@ -1,0 +1,25 @@
+#name: Bridgebuilder
+#
+#on:
+#  push:
+#    branches: [ master ]
+#
+#jobs:
+#  deploy:
+#    runs-on: ubuntu-latest
+#
+#    steps:
+#      - name: Checkout
+#        uses: actions/checkout@v2
+#      - name: Deployment
+#        uses: appleboy/ssh-action@master
+#        with:
+#          host: ${{ secrets.HOST }}
+#          key: ${{ secrets.SSHKEY }}
+#          username: ${{ secrets.USERNAME }}
+#          script: |
+#            cd /var/www/bridgebuilder
+#            sudo git fetch origin master
+#            sudo git reset --hard origin/master
+#            composer install --no-interaction --prefer-dist --optimize-autoloader
+#            composer update
